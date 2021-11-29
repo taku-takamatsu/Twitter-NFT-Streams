@@ -1,0 +1,15 @@
+{
+  "name": "kinesis",
+  "version": "1.0.0",
+  "description": "",
+  "main": "kinesis_consumer.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@google-cloud/bigquery": "^5.9.2",
+    "sentiment": "^5.0.2"
+  }
+}
