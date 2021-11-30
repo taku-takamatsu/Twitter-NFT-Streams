@@ -34,10 +34,9 @@ class TweetStreamListener(Stream):
     def on_error(self, status):
         print(status)
 
-
 if __name__ == '__main__':
     # create kinesis client connection
-    session = boto3.Session(profile_name='main')
+    session = boto3.Session()
 
     # create the kinesis client
     kinesis_client = session.client('kinesis', region_name='us-east-1')
@@ -51,7 +50,7 @@ if __name__ == '__main__':
                 os.environ['TWITTER_ACCESS_TOKEN'], os.environ['TWITTER_ACCESS_TOKEN_SECRET']
             )
             # search twitter for the keyword
-            stream.filter(track=["NFT music", "eth music"], languages=['en'], stall_warnings=True)
+            stream.filter(track=["NFT music", "ETH music", "web3 music", "Opensea music"], languages=['en'], stall_warnings=True)
         except Exception as e:
             print(e)
             print('Disconnected...')
